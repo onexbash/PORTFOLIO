@@ -7,7 +7,7 @@
     --rosewater_color: #f5e0dc;
     --flamingo_color: #f2cdcd;
     --pink_color: #f5c2e7;
-    --mauve_color: #7300ff;
+    --mauve_color: #cba6f7;
     --red_color: #f38ba8;
     --maroon_color: #eba0ac;
     --peach_color: #fab387;
@@ -118,7 +118,7 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r  inline-block text-transparent bg-clip-text;
+  @apply bg-gradient-to-r inline-block text-transparent bg-clip-text;
 }
 
 .main-background {
@@ -129,7 +129,7 @@
 }
 
 .bento-grid-box {
-  @apply bg-secondary  dark:bg-[#232336] text-secondary-foreground p-4 py-7 md:p-10 rounded-lg;
+  @apply bg-secondary dark:bg-[#232336] text-secondary-foreground p-4 py-7 md:p-10 rounded-lg;
 }
 
 .bento-grid-text {
@@ -140,6 +140,7 @@
   from {
     filter: blur(20px);
   }
+
   to {
     filter: blur(0px);
   }

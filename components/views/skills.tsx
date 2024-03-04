@@ -1,15 +1,7 @@
 "use client";
 import { useSectionInView } from "@/lib/hooks";
 import React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { developmentSkills, softSkills, technologicalSkills } from "@/data/data";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Skills() {

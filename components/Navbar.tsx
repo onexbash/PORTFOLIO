@@ -1,14 +1,15 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
 import { ModeToggle } from "@/components/mode-toggler";
 import { useActiveSectionContext } from "@/components/active-session-context";
 import { links } from "@/data/data";
 import clsx from "clsx";
 import { motion } from "framer-motion";
+import { IconFavicon } from "@/components/icons/favicon";
+import FaviconSVG from "@/public/icons/favicon.svg";
 
 import Link from "next/link";
 
@@ -31,10 +32,8 @@ export default function Navbar() {
         >
           <div className="mx-auto xl:mt-3 flex max-w-6xl items-center justify-between xl:rounded-2xl border border-zinc-200/10 bg-[#cdd6f4]/40 p-4 xl:p-2  dark:border-zinc-700/10 dark:bg-[#313244] !dark:opacity-20 lg:px-5 !backdrop-blur-md">
             <div className="flex lg:flex-1">
-              <Link href="/" className="ms-3 p-1.5 outline-none">
-                <p className="text-xl font-extralight transition-colors duration-150 hover:text-foreground/70 outline-none">
-                  Fabian Schlegel
-                </p>
+              <Link href="/" className="ms-3 p-1.5 outline-none w-8 h-8">
+                <IconFavicon className="h-6 w-6" fill="#cba6f7" />
               </Link>
             </div>
             <div className="flex lg:hidden">
@@ -121,7 +120,7 @@ export default function Navbar() {
 
                       {link.name === activeSection && (
                         <motion.span
-                          className="absolute inset-0 -z-10  rounded-full bg-[#a855f7] text-white "
+                          className="absolute inset-0 -z-10  rounded-full bg-mauve_color text-text_color"
                           layoutId="activeSection"
                           transition={{
                             type: "spring",
