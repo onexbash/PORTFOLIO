@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Schlegel;Fabian;;;
+FN:Fabian Schlegel
+ORG:Identity & Access Management Engineer
+TITLE:Engineer
+PHOTO;VALUE=URI:https://fabian.schlegel.one/api/avatar.png
+EMAIL;TYPE=PREF,INTERNET:fabian@schlegel.one
+URL:https://fabian.schlegel.one
+BDAY:20021209
+ADR;TYPE=HOME:;;Kreuznacher Weg 35;Roxheim;;55595;Germany
+END:VCARD

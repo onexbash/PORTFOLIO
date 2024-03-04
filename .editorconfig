@@ -1,0 +1,36 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 110
+
+# JavaScript, TypeScript, JSX, TSX, Python & Rust
+[*.{js,ts,jsx,tsx,py,rs}]
+charset = utf-8
+
+# Python
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Matches the exact files package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+# JSON, YAML, YML
+[*.{json, yml, yaml}]
+charset = utf-8
+
+# Markdown
+[*.md]
+indent_style = tab
+trim_trailing_whitespace = false
+
+# Makefile
+[Makefile]
+indent_style = tab

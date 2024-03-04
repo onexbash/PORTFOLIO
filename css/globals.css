@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --rosewater_color: #f5e0dc;
+    --flamingo_color: #f2cdcd;
+    --pink_color: #f5c2e7;
+    --mauve_color: #7300ff;
+    --red_color: #f38ba8;
+    --maroon_color: #eba0ac;
+    --peach_color: #fab387;
+    --yellow_color: #f9e2af;
+    --green_color: #a6e3a1;
+    --teal_color: #94e2d5;
+    --sky_color: #89dceb;
+    --sapphire_color: #74c7ec;
+    --blue_color: #89b4fa;
+    --lavendar_color: #b4befe;
+    --text_color: #cdd6f4;
+    --subtext1_color: #bac2de;
+    --subtext0_color: #a6adc8;
+    --overlay2_color: #9399b2;
+    --overlay1_color: #7f849c;
+    --overlay0_color: #6c7086;
+    --surface2_color: #585b70;
+    --surface1_color: #45475a;
+    --surface0_color: #313244;
+    --base_color: #1e1e2e;
+    --mantle_color: #181825;
+    --crust_color: #0c0c0c;
+    --cat-white: #fff;
+    --base_color: #1e1e2e;
+
+    --background: var(--base_color);
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 240, 5%, 96%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0, 0%, 5%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 237 16% 23%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 240, 5%, 34%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cat_white dark:bg-mantle_color text-foreground;
+  }
+}
+
+.active-header-link {
+  @apply bg-mauve_color;
+}
+
+.background-grid-color {
+  @apply bg-gradient-to-t from-white dark:from-mantle_color via-transparent to-transparent;
+}
+
+.heading {
+  @apply text-4xl font-semibold;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r  inline-block text-transparent bg-clip-text;
+}
+
+.main-background {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to left, rgba(153, 153, 153, 0.163) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(153, 153, 153, 0.163) 1px, transparent 1px);
+  animation: unblur 1s ease-out forwards;
+}
+
+.bento-grid-box {
+  @apply bg-secondary  dark:bg-[#232336] text-secondary-foreground p-4 py-7 md:p-10 rounded-lg;
+}
+
+.bento-grid-text {
+  @apply text-lg text-[#181825]/80 dark:text-[#cdd6f4];
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+.unblur-animation {
+  animation: unblur 1s ease-out forwards;
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+.autosize-none {
+  resize: none;
+}
+
+a {
+  @apply !outline-none;
+}
