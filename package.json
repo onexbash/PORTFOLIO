@@ -1,6 +1,6 @@
 {
-  "name": "one_portfolio",
-  "version": "2.1.0",
+  "name": "portfolio",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "start": "next dev",
