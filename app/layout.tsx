@@ -3,6 +3,7 @@ import siteMetadata from "@/data/siteMetadata";
 import { Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import BackgroundGrid from "@/components/background-grid";
 import ActiveSectionContextProvider from "@/components/active-session-context";
 
 const space_grotesk = Space_Grotesk({
@@ -50,9 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="relative">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="absolute max-h-[50vh] w-full overflow-hidden bg-gradient-to-t   from-background to-transparent dark:from-mantle_color "></div>
-
           <ActiveSectionContextProvider>
             <section className="relative z-10 ">
+              <BackgroundGrid />
               <main>{children}</main>
             </section>
           </ActiveSectionContextProvider>
