@@ -62,7 +62,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex h-screen flex-col font-sans">
                 <Navbar />
                 <main>{children}</main>
-                <Toaster richColors />
                 <Footer />
               </div>
             </section>

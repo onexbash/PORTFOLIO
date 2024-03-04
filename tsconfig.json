@@ -16,6 +16,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "@": ["."],
       "@/app*": ["app/*"],
