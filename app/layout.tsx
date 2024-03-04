@@ -2,6 +2,7 @@ import "@/css/globals.css";
 import siteMetadata from "@/data/siteMetadata";
 import { Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
 import ActiveSectionContextProvider from "@/components/active-session-context";
 
 const space_grotesk = Space_Grotesk({
@@ -40,18 +41,23 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return;
-  <html
-    lang={siteMetadata.language}
-    className={`${space_grotesk.variable} scroll-smooth`}
-    suppressHydrationWarning
-  >
-    <body className="relative">
-      <ActiveSectionContextProvider>
-        <section className="relative z-10 ">
-          <main>{children}</main>
-        </section>
-      </ActiveSectionContextProvider>
-    </body>
-  </html>;
+  return (
+    <html
+      lang={siteMetadata.language}
+      className={`${space_grotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
+    >
+      <body className="relative">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="absolute max-h-[50vh] w-full overflow-hidden bg-gradient-to-t   from-background to-transparent dark:from-mantle_color "></div>
+
+          <ActiveSectionContextProvider>
+            <section className="relative z-10 ">
+              <main>{children}</main>
+            </section>
+          </ActiveSectionContextProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import HeroSection from "@/components/views/hero-section";
 import AboutMe from "@/components/views/about-me";
