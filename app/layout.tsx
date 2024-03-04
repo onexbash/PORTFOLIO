@@ -3,6 +3,7 @@ import siteMetadata from "@/data/siteMetadata";
 import { Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/Navbar";
 import BackgroundGrid from "@/components/background-grid";
 import ActiveSectionContextProvider from "@/components/active-session-context";
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ActiveSectionContextProvider>
             <section className="relative z-10 ">
               <BackgroundGrid />
+              <Navbar />
               <main>{children}</main>
             </section>
           </ActiveSectionContextProvider>
