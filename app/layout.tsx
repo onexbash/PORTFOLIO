@@ -1,5 +1,14 @@
+import "@/css/globals.css";
 import siteMetadata from "@/data/siteMetadata";
+import { Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
+import ActiveSectionContextProvider from "@/components/active-session-context";
+
+const space_grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -31,5 +40,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <main>{children}</main>;
+  return;
+  <html
+    lang={siteMetadata.language}
+    className={`${space_grotesk.variable} scroll-smooth`}
+    suppressHydrationWarning
+  >
+    <body className="relative">
+      <ActiveSectionContextProvider>
+        <section className="relative z-10 ">
+          <main>{children}</main>
+        </section>
+      </ActiveSectionContextProvider>
+    </body>
+  </html>;
 }

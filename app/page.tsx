@@ -1,7 +1,11 @@
+"use client";
+import React from "react";
+import HeroSection from "@/components/views/hero-section";
+
 export default function Page() {
-    return(
-        <div>
-            <h1 className="text-3xl font-bold">Page</h1>
-        </div>
-    )
+  return (
+    <div id="Home" className="pb-10">
+      <HeroSection />
+    </div>
+  );
 }
