@@ -4,6 +4,7 @@ import { Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import BackgroundGrid from "@/components/background-grid";
 import ActiveSectionContextProvider from "@/components/active-session-context";
 
@@ -55,8 +56,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ActiveSectionContextProvider>
             <section className="relative z-10 ">
               <BackgroundGrid />
-              <Navbar />
-              <main>{children}</main>
+              <div className="flex h-screen flex-col font-sans">
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
+              </div>
             </section>
           </ActiveSectionContextProvider>
         </ThemeProvider>
