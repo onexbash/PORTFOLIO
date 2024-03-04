@@ -18,14 +18,14 @@ export default function ContactMe() {
     event.preventDefault(); // Prevent default form submission behavior
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("/api/contactMail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: email, // Update this field based on your form structure
-          message: message, // Update or remove this field based on your form structure
+          name: email,
+          message: message,
         }),
       });
 
@@ -34,7 +34,7 @@ export default function ContactMe() {
         setIsLoading(false);
         // Reset form or redirect user
       } else {
-        toast.error("There was error sending email.");
+        toast.error("There was an error sending email.");
         setIsLoading(false);
 
         // alert("Failed to send email");

@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/sonner";
 import BackgroundGrid from "@/components/background-grid";
 import ActiveSectionContextProvider from "@/components/active-session-context";
 import TabNavigationDisable from "@/components/tab-key-navigation-disable";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="flex h-screen flex-col font-sans">
                 <Navbar />
                 <main>{children}</main>
+                <Toaster richColors />
                 <Footer />
               </div>
             </section>

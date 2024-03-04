@@ -92,6 +92,9 @@ dependencies:
   css:
     specifier: ^3.0.0
     version: 3.0.0
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   embla-carousel-autoplay:
     specifier: ^8.0.0-rc22
     version: 8.0.0(embla-carousel@8.0.0)
@@ -4663,6 +4666,11 @@ packages:
       no-case: 3.0.4
       tslib: 2.6.2
     dev: true
+
+  /dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}

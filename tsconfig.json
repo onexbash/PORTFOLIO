@@ -23,7 +23,8 @@
       "@/public/*": ["public/*"],
       "@/data/*": ["data/*"],
       "@/css/*": ["css/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/api/*": ["app/api/*"]
     },
     "plugins": [
       {
