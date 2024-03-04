@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import BackgroundGrid from "@/components/background-grid";
 import ActiveSectionContextProvider from "@/components/active-session-context";
+import TabNavigationDisable from "@/components/tab-key-navigation-disable";
 
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -50,11 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
+      <TabNavigationDisable />
       <body className="relative">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="absolute max-h-[50vh] w-full overflow-hidden bg-gradient-to-t   from-background to-transparent dark:from-mantle_color "></div>
           <ActiveSectionContextProvider>
-            <section className="relative z-10 ">
+            <section className="relative z-10">
               <BackgroundGrid />
               <div className="flex h-screen flex-col font-sans">
                 <Navbar />
