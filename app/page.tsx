@@ -4,6 +4,7 @@ import AboutMe from "@/components/views/about-me";
 import Projects from "@/components/views/projects";
 import Skills from "@/components/views/skills";
 import Experience from "@/components/views/experience";
+import ContactMe from "@/components/views/contact-me";
 export default function Page() {
   return (
     <div id="Home" className="pb-10">
@@ -12,6 +13,7 @@ export default function Page() {
       <Projects />
       <Skills />
       <Experience />
+      <ContactMe />
     </div>
   );
 }
