@@ -101,7 +101,7 @@
   }
 
   body {
-    @apply bg-cat_white dark:bg-mantle_color text-foreground;
+    @apply bg-cat_white text-foreground dark:bg-mantle_color;
   }
 }
 
@@ -110,7 +110,7 @@
 }
 
 .background-grid-color {
-  @apply bg-gradient-to-t from-white dark:from-mantle_color via-transparent to-transparent;
+  @apply bg-gradient-to-t from-white via-transparent to-transparent dark:from-mantle_color;
 }
 
 .heading {
@@ -118,7 +118,7 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r inline-block text-transparent bg-clip-text;
+  @apply inline-block bg-gradient-to-r bg-clip-text text-transparent;
 }
 
 .main-background {
@@ -129,7 +129,7 @@
 }
 
 .bento-grid-box {
-  @apply bg-secondary dark:bg-[#232336] text-secondary-foreground p-4 py-7 md:p-10 rounded-lg;
+  @apply rounded-lg bg-secondary p-4 py-7 text-secondary-foreground dark:bg-[#232336] md:p-10;
 }
 
 .bento-grid-text {

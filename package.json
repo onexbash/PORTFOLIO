@@ -8,7 +8,9 @@
     "build": "cross-env INIT_CWD=$PWD next build && cross-env",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib"
+    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "format:check": "prettier --check --ignore-path .gitignore ."
   },
   "engines": {
     "node": "20.x"

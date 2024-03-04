@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconMySQL = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -21,14 +21,9 @@ export const IconMySQL = (props: React.SVGAttributes<SVGElement>) => {
       </g>
       <defs>
         <clipPath id='mysql_icon'>
-          <rect
-            width='180'
-            height='180'
-            fill='#fff'
-            transform='translate(38 38)'
-          />
+          <rect width='180' height='180' fill='#fff' transform='translate(38 38)' />
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

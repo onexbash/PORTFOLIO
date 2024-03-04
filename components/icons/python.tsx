@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconPython = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -44,5 +44,5 @@ export const IconPython = (props: React.SVGAttributes<SVGElement>) => {
         </linearGradient>
       </defs>
     </svg>
-  )
-}
+  );
+};

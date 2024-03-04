@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconReactJS = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -37,5 +37,5 @@ export const IconReactJS = (props: React.SVGAttributes<SVGElement>) => {
         clipRule='evenodd'
       />
     </svg>
-  )
-}
+  );
+};

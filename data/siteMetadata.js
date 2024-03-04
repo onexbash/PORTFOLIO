@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 
-const mail = process.env.MAIL
+const mail = process.env.MAIL;
 
 const siteMetadata = {
   title: 'Fabian Schlegel',
@@ -19,6 +19,6 @@ const siteMetadata = {
       umamiWebsiteId: process.env.NEXT_UMAMI_ID,
     },
   },
-}
+};
 
-module.exports = siteMetadata
+module.exports = siteMetadata;

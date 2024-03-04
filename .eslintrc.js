@@ -16,7 +16,7 @@ module.exports = {
     // 'plugin:prettier/recommended',
     'next',
     'next/core-web-vitals',
-    // 'prettier',
+    'prettier',
   ],
   parserOptions: {
     project: true,
@@ -42,4 +42,4 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
   },
-}
+};

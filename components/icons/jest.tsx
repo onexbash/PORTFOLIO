@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconJest = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -16,5 +16,5 @@ export const IconJest = (props: React.SVGAttributes<SVGElement>) => {
         fill='white'
       />
     </svg>
-  )
-}
+  );
+};

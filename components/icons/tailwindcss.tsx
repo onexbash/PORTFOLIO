@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconTailwindcss = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -31,5 +31,5 @@ export const IconTailwindcss = (props: React.SVGAttributes<SVGElement>) => {
         </linearGradient>
       </defs>
     </svg>
-  )
-}
+  );
+};

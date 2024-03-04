@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconGit = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -20,14 +20,9 @@ export const IconGit = (props: React.SVGAttributes<SVGElement>) => {
       </g>
       <defs>
         <clipPath id='git_icon'>
-          <rect
-            width='200'
-            height='200'
-            fill='#fff'
-            transform='translate(28 28)'
-          />
+          <rect width='200' height='200' fill='#fff' transform='translate(28 28)' />
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconPrisma = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -18,5 +18,5 @@ export const IconPrisma = (props: React.SVGAttributes<SVGElement>) => {
         clipRule='evenodd'
       />
     </svg>
-  )
-}
+  );
+};

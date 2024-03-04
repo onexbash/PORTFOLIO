@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconFirebase = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -34,24 +34,9 @@ export const IconFirebase = (props: React.SVGAttributes<SVGElement>) => {
           fill='#FFA000'
           d='M55 189.366L79.7455 31.8775C80.4297 27.5596 86.2455 26.5369 88.2981 30.4003L113.842 77.8969L123.991 58.5801C124.776 57.0744 126.337 56.1294 128.039 56.1294C129.742 56.1294 131.303 57.0744 132.087 58.5801L200.964 189.366H55Z'
         />
-        <rect
-          width='99.21'
-          height='126.127'
-          x='45.877'
-          y='67.784'
-          fill='url(#firebase_icon_pattern_0)'
-        />
-        <path
-          fill='#F57C00'
-          d='M140.298 128.007L113.728 77.8969L55 189.366L140.298 128.007Z'
-        />
-        <rect
-          width='159.649'
-          height='174.988'
-          x='50.439'
-          y='58.694'
-          fill='url(#firebase_icon_pattern_1)'
-        />
+        <rect width='99.21' height='126.127' x='45.877' y='67.784' fill='url(#firebase_icon_pattern_0)' />
+        <path fill='#F57C00' d='M140.298 128.007L113.728 77.8969L55 189.366L140.298 128.007Z' />
+        <rect width='159.649' height='174.988' x='50.439' y='58.694' fill='url(#firebase_icon_pattern_1)' />
         <path
           fill='#FFCA28'
           d='M200.965 189.366L182.035 72.6702C181.752 70.9859 180.551 69.599 178.92 69.0734C177.289 68.5477 175.501 68.9706 174.281 70.1704L55.0005 189.366L121.027 226.296C125.182 228.568 130.214 228.568 134.369 226.296L200.965 189.366Z'
@@ -72,27 +57,11 @@ export const IconFirebase = (props: React.SVGAttributes<SVGElement>) => {
         />
       </g>
       <defs>
-        <pattern
-          id='firebase_icon_pattern_0'
-          width='1'
-          height='1'
-          patternContentUnits='objectBoundingBox'
-        >
-          <use
-            transform='scale(0.0114943 0.00892857)'
-            xlinkHref='#image0_147_896'
-          />
+        <pattern id='firebase_icon_pattern_0' width='1' height='1' patternContentUnits='objectBoundingBox'>
+          <use transform='scale(0.0114943 0.00892857)' xlinkHref='#image0_147_896' />
         </pattern>
-        <pattern
-          id='firebase_icon_pattern_1'
-          width='1'
-          height='1'
-          patternContentUnits='objectBoundingBox'
-        >
-          <use
-            transform='scale(0.00714286 0.00645161)'
-            xlinkHref='#image1_147_896'
-          />
+        <pattern id='firebase_icon_pattern_1' width='1' height='1' patternContentUnits='objectBoundingBox'>
+          <use transform='scale(0.00714286 0.00645161)' xlinkHref='#image1_147_896' />
         </pattern>
         <linearGradient
           id='firebase_icon#firebase_icon_gradient_0'
@@ -130,5 +99,5 @@ export const IconFirebase = (props: React.SVGAttributes<SVGElement>) => {
         />
       </defs>
     </svg>
-  )
-}
+  );
+};

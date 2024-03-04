@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconFigma = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -35,14 +35,9 @@ export const IconFigma = (props: React.SVGAttributes<SVGElement>) => {
       </g>
       <defs>
         <clipPath id='figma_icon'>
-          <rect
-            width='133.36'
-            height='200'
-            fill='#fff'
-            transform='translate(61 28)'
-          />
+          <rect width='133.36' height='200' fill='#fff' transform='translate(61 28)' />
         </clipPath>
       </defs>
     </svg>
-  )
-}
+  );
+};

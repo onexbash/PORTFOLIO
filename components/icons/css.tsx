@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconCSS = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -11,14 +11,8 @@ export const IconCSS = (props: React.SVGAttributes<SVGElement>) => {
       {...props}
     >
       <rect width='256' height='256' rx='60' fill='#0277BD' />
-      <path
-        d='M53.7527 102.651L56.6155 134.593H128.096V102.651H53.7527Z'
-        fill='#EBEBEB'
-      />
-      <path
-        d='M128.095 38H127.985H48L50.9036 69.9423H128.095V38Z'
-        fill='#EBEBEB'
-      />
+      <path d='M53.7527 102.651L56.6155 134.593H128.096V102.651H53.7527Z' fill='#EBEBEB' />
+      <path d='M128.095 38H127.985H48L50.9036 69.9423H128.095V38Z' fill='#EBEBEB' />
       <path
         d='M128.095 218.841V185.608L127.955 185.645L92.3813 176.04L90.1072 150.564H72.821H58.0425L62.5175 200.718L127.948 218.882L128.095 218.841Z'
         fill='#EBEBEB'
@@ -28,5 +22,5 @@ export const IconCSS = (props: React.SVGAttributes<SVGElement>) => {
         fill='white'
       />
     </svg>
-  )
-}
+  );
+};

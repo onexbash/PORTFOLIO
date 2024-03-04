@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconJavascript = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -20,5 +20,5 @@ export const IconJavascript = (props: React.SVGAttributes<SVGElement>) => {
         fill='#323330'
       />
     </svg>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
@@ -12,7 +12,7 @@ const ContentSecurityPolicy = `
   connect-src *;
   font-src 'self';
   frame-src giscus.app
-`
+`;
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -50,13 +50,13 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
-]
+];
 
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
  **/
 module.exports = () => {
-  const plugins = [withBundleAnalyzer]
+  const plugins = [withBundleAnalyzer];
   return plugins.reduce((acc, next) => next(acc), {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx'],
@@ -83,16 +83,16 @@ module.exports = () => {
           source: '/(.*)',
           headers: securityHeaders,
         },
-      ]
+      ];
     },
     webpack(config) {
       //////////////////////////////////////
       //    @svgr/webpack CONFIGURATION   //
       // https://react-svgr.com/docs/next //
       //////////////////////////////////////
-      const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg')) // Grab the existing rule that handles SVG imports
+      const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg')); // Grab the existing rule that handles SVG imports
       if (!fileLoaderRule) {
-        throw new Error('SVG file loader rule not found')
+        throw new Error('SVG file loader rule not found');
       }
 
       config.module.rules.push(
@@ -109,12 +109,12 @@ module.exports = () => {
           resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
           use: ['@svgr/webpack'],
         }
-      )
+      );
 
       // Modify the file loader rule to ignore *.svg, since we have it handled now.
-      fileLoaderRule.exclude = /\.svg$/i
+      fileLoaderRule.exclude = /\.svg$/i;
 
-      return config
+      return config;
     },
-  })
-}
+  });
+};

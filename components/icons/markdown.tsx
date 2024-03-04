@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconMarkdown = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -21,5 +21,5 @@ export const IconMarkdown = (props: React.SVGAttributes<SVGElement>) => {
         d='M54 162V94H74L94 119L114 94H134V162H114V123L94 148L74 123V162H54ZM179 162L149 129H169V94H189V129H209L179 162Z'
       />
     </svg>
-  )
-}
+  );
+};

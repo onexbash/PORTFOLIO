@@ -1,19 +1,19 @@
-import "@/css/globals.css";
-import siteMetadata from "@/data/siteMetadata";
-import { Space_Grotesk } from "next/font/google";
-import { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/footer";
-import { Toaster } from "@/components/ui/sonner";
-import BackgroundGrid from "@/components/background-grid";
-import ActiveSectionContextProvider from "@/components/active-session-context";
-import TabNavigationDisable from "@/components/tab-key-navigation-disable";
+import '@/css/globals.css';
+import siteMetadata from '@/data/siteMetadata';
+import { Space_Grotesk } from 'next/font/google';
+import { Metadata } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/footer';
+import { Toaster } from '@/components/ui/sonner';
+import BackgroundGrid from '@/components/background-grid';
+import ActiveSectionContextProvider from '@/components/active-session-context';
+import TabNavigationDisable from '@/components/tab-key-navigation-disable';
 
 const space_grotesk = Space_Grotesk({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-space-grotesk",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
 });
 
 export const metadata: Metadata = {
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: "./",
+    url: './',
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   robots: {
     index: true,
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 };
@@ -53,13 +53,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <TabNavigationDisable />
-      <body className="relative">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="absolute max-h-[50vh] w-full overflow-hidden bg-gradient-to-t   from-background to-transparent dark:from-mantle_color "></div>
+      <body className='relative'>
+        <ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+          <div className='absolute max-h-[50vh] w-full overflow-hidden bg-gradient-to-t   from-background to-transparent dark:from-mantle_color '></div>
           <ActiveSectionContextProvider>
-            <section className="relative z-10">
+            <section className='relative z-10'>
               <BackgroundGrid />
-              <div className="flex h-screen flex-col font-sans">
+              <div className='flex h-screen flex-col font-sans'>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />

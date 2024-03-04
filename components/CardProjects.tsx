@@ -1,7 +1,7 @@
-import "@/css/globals.css";
-import Image from "next/image";
-import Link from "next/link";
-import * as React from "react";
+import '@/css/globals.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import * as React from 'react';
 import {
   Dialog,
   DialogContent,
@@ -9,19 +9,19 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from '@/components/ui/dialog';
 
-import { cn } from "@/lib/utils";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from '@/lib/utils';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 const CardProjects = ({ href, title, imgSrc, company, tasks, description, ...props }) => (
-  <Card className={cn("group flex h-full  justify-between")} {...props}>
+  <Card className={cn('group flex h-full  justify-between')} {...props}>
     <div>
       <CardHeader>
-        <div className="">
+        <div className=''>
           <a
-            target="_blank"
-            className=" font-light text-black/80 dark:text-[#cdd6f4]/80"
+            target='_blank'
+            className=' font-light text-black/80 dark:text-[#cdd6f4]/80'
             href={href}
             aria-label={`Link to ${company}`}
           >
@@ -31,21 +31,21 @@ const CardProjects = ({ href, title, imgSrc, company, tasks, description, ...pro
 
         {/* <CardTitle></CardTitle> */}
       </CardHeader>
-      <CardContent className="overflow-hidden ">
-        <div className="relative  gap-6">
-          <div className="relative overflow-hidden h-40 w-80` rounded-md flex-shrink-0">
+      <CardContent className='overflow-hidden '>
+        <div className='relative  gap-6'>
+          <div className='w-80` relative h-40 flex-shrink-0 overflow-hidden rounded-md'>
             <Image
               alt={title}
               src={imgSrc}
-              className="h-full w-full  rounded-md object-cover object-center transition-all duration-500 group-hover:scale-105"
+              className='h-full w-full  rounded-md object-cover object-center transition-all duration-500 group-hover:scale-105'
               width={800}
               height={800}
             />
           </div>
           <div>
-            <p className=" text-xl font-bold md:text-3xl">{title}</p>
-            <div className="py-6 pt-3">
-              <p className="  max-w-none text-sm text-black/60 dark:text-[#cdd6f4]/60">{description}</p>
+            <p className=' text-xl font-bold md:text-3xl'>{title}</p>
+            <div className='py-6 pt-3'>
+              <p className='  max-w-none text-sm text-black/60 dark:text-[#cdd6f4]/60'>{description}</p>
             </div>
           </div>
         </div>

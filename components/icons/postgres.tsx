@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 export const IconPostgres = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -62,5 +62,5 @@ export const IconPostgres = (props: React.SVGAttributes<SVGElement>) => {
         d='M182.577 87.8867C182.928 94.3555 181.184 98.75 180.959 105.634C180.636 115.632 185.727 127.079 178.055 138.54'
       />
     </svg>
-  )
-}
+  );
+};
