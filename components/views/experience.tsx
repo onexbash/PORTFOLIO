@@ -15,7 +15,7 @@ export default function Experience() {
 
   return (
     <section ref={ref} id='experience' className='bg- relative mx-auto mt-28 max-w-6xl scroll-mt-28'>
-      <div className='absolute bottom-0 left-6 z-20 h-80 w-4 bg-gradient-to-t from-white dark:from-[#181825] md:left-10 '></div>
+      <div className='absolute bottom-0 left-6 z-20 h-80 w-4 md:left-10 '></div>
       <SectionHeading key={'left'}>My experience</SectionHeading>
       <VerticalTimeline
         layout={'1-column-left'}
@@ -26,20 +26,18 @@ export default function Experience() {
             <VerticalTimelineElement
               visible={true}
               contentStyle={{
-                background: theme === 'light' ? '#f3f4f6' : 'rgba(180, 190, 254, 0.08)',
+                background: 'var(--secondary_bg)',
                 boxShadow: 'none',
-                border: '1px solid rgba(0, 0, 0, 0.05)',
                 textAlign: 'left',
                 // padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight:
-                  theme === 'light' ? '0.4rem solid #9ca3af' : '0.4rem solid rgba(180, 190, 254, 0.5)',
+                borderRight: '0.5rem solid var(--accent3)',
               }}
               // date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: theme === 'light' ? 'white' : '#27272a',
+                background: 'var(--secondary_bg)',
                 fontSize: '1.5rem',
               }}
             >
@@ -47,28 +45,24 @@ export default function Experience() {
                 <div className='flex h-fit !w-full flex-col pt-6 md:items-center md:justify-center'>
                   <Image
                     alt='company logo'
-                    width={400}
-                    height={400}
+                    width={200}
+                    height={200}
                     src={item.logo}
                     className='w-28 rounded-full bg-white p-4'
-                  ></Image>
+                  />
                   <p className=' mt-4 !font-bold md:text-center '>{item.company}</p>
-                  <p className='!mt-1 !text-[14px] !font-extralight text-black/60 dark:text-[#cdd6f4]/60'>
-                    {item.date}
-                  </p>
-                  <div className='mt-3 bg-white/10 p-[1px]'></div>
+                  <p className='!mt-1 !text-[14px] !font-extralight text-primary_fg '>{item.date}</p>
+                  <div className='mt-3 bg-accent3 p-[1px] md:mt-0 md:bg-transparent md:p-0' />
                 </div>
                 <div className='col-span-3 pt-6'>
-                  <h3 className='text-2xl  capitalize'>{item.title}</h3>
+                  <h3 className='text-2xl capitalize text-accent2'>{item.title}</h3>
 
-                  <p className='!mt-2 !text-sm !font-light text-gray-700 dark:text-[#cdd6f4]/90'>
-                    {item.description}
-                  </p>
+                  <p className='!mt-2 !text-sm !font-light text-primary_fg'>{item.description}</p>
 
-                  <p className='!mt-7'>Responsibilities</p>
+                  <p className='!mt-7 text-highlight_fg'>Responsibilities</p>
                   <div className='mt-2'>
                     {item.tasks.map((task) => (
-                      <li key={task} className='!text-sm text-gray-700 dark:text-[#cdd6f4]/60'>
+                      <li key={task} className='!text-sm text-secondary_fg'>
                         {task}
                       </li>
                     ))}

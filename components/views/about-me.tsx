@@ -3,14 +3,10 @@
 import { EvervaultCard } from '@/components/ui/evervault-card';
 import Image from 'next/image';
 import React from 'react';
-import Marquee from 'react-fast-marquee';
 import { CoreTechnologies } from '@/components/CoreTechnologies';
-
-import { techlinks, techfill, iconComponents } from '@/components/icons/technologies';
 
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-import { useTheme } from 'next-themes';
 import { FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
 

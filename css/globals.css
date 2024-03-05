@@ -43,7 +43,7 @@
     --accent1: var(--Sky);
     --accent2: var(--Pink);
     --accent3: var(--Lavender);
-    --accent_fg: var(--Crust);
+    --accent_fg: hsl(240, 23%, 9%);
   }
 
   .dark {

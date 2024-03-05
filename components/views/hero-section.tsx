@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { HiOutlineDownload } from 'react-icons/hi';
+import { Handshake } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -45,11 +46,11 @@ export default function HeroSection() {
           >
             <Image
               src='/images/avatar.png'
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               alt='Fabian Schlegel'
               className='unblur-animation 0 w-40 rounded-full bg-transparent shadow shadow-accent1 backdrop-blur-lg'
-            ></Image>
+            />
           </motion.div>
           <motion.div
             initial={{ y: 100, opacity: 0 }}
@@ -66,7 +67,11 @@ export default function HeroSection() {
             </p>
             <div className='mt-10 flex flex-col justify-center gap-5 md:flex-row'>
               <a target='_blank' href='/downloads/resume-fabian-schlegel.pdf' className='outline-none'>
-                <Button variant={'default'} className='w-full rounded-full !bg-accent2 text-lg' size={'xl'}>
+                <Button
+                  variant={'default'}
+                  className='w-full rounded-full !bg-accent2 text-lg opacity-70'
+                  size={'xl'}
+                >
                   Download Resume
                   <HiOutlineDownload size={20} />
                 </Button>
@@ -74,11 +79,11 @@ export default function HeroSection() {
               <Link href='#contact'>
                 <Button
                   variant={'outline'}
-                  className='w-full rounded-full bg-accent1 pe-20 ps-14 text-lg text-accent_fg'
+                  className='w-full rounded-full bg-accent1 ps-14 text-lg text-accent_fg opacity-70 hover:text-accent_fg'
                   size={'xl'}
                 >
-                  <PiDotFill size={36} className='mb-[2px] text-accent2' />
-                  Hire Me
+                  Contact Me
+                  <Handshake size={18} className='mt-[1px]' />
                 </Button>
               </Link>
             </div>

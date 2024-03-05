@@ -61,9 +61,7 @@ export default function ContactMe() {
       >
         <div className='mx-auto w-full max-w-2xl '>
           <div className='flex flex-col justify-center'>
-            <p className='to-primary_fg/60 flex justify-center from-primary_fg text-center text-4xl text-gradient'>
-              Contact me
-            </p>
+            <p className='flex justify-center text-center text-4xl text-highlight_fg'>Contact me</p>
             <p className='primary_fg/60 mt-2'>
               Contact me directly at <span className='text-primary_fg'>fabian@schlegel.one</span> or use this
               form.
@@ -95,7 +93,7 @@ export default function ContactMe() {
             />
             <Button
               variant={'default'}
-              className='h-10 w-full bg-accent3 text-lg hover:scale-100'
+              className='h-10 w-full !bg-accent1 text-lg hover:scale-100'
               type='submit'
             >
               Send Email

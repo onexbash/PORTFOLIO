@@ -22,14 +22,14 @@ export default function Skills() {
 
   return (
     <div ref={ref} id='skills' className='mx-auto max-w-6xl p-4 pt-28'>
-      <p className='text-4xl font-semibold'>Skills</p>
+      <p className='text-4xl font-semibold text-highlight_fg'>Skills</p>
 
-      <p className='mb-2 mt-5 font-bold text-black/60 dark:text-white/60'>Development Skills</p>
+      <p className='mb-2 mt-5 font-bold text-primary_fg'>Development</p>
       <div className='flex flex-wrap gap-2'>
         {developmentSkills.map((skill, index) => (
           <motion.div
             key={index}
-            className=' rounded-xl bg-secondary/80 p-5 py-2 font-semibold text-black dark:text-white md:text-lg'
+            className='rounded-xl bg-secondary_bg p-5 py-2 font-semibold text-secondary_fg md:text-lg'
             variants={fadeInAnimationVariants}
             initial='initial'
             whileInView='animate'
@@ -43,11 +43,11 @@ export default function Skills() {
         ))}
       </div>
 
-      <p className='mb-2 mt-10 font-bold text-white/60'>Technological Skills</p>
+      <p className='mb-2 mt-10 font-bold text-primary_fg'>Technologies</p>
       <ul className='flex flex-wrap gap-2'>
         {technologicalSkills.map((skill, index) => (
           <motion.li
-            className=' rounded-xl bg-secondary/80 p-5 py-2 font-semibold text-black dark:text-white md:text-lg'
+            className='rounded-xl bg-secondary_bg p-5 py-2 font-semibold text-secondary_fg md:text-lg'
             key={index}
             variants={fadeInAnimationVariants}
             initial='initial'
@@ -62,11 +62,11 @@ export default function Skills() {
         ))}
       </ul>
 
-      <p className='mb-2 mt-10 font-bold text-white/60'>Soft Skills</p>
+      <p className='mb-2 mt-10 font-bold text-primary_fg'>Soft Skills</p>
       <ul className='flex flex-wrap gap-2'>
         {softSkills.map((skill, index) => (
           <motion.li
-            className=' rounded-xl bg-secondary/80 p-5 py-2 font-semibold text-black dark:text-white md:text-lg'
+            className='rounded-xl bg-secondary_bg p-5 py-2 font-semibold text-secondary_fg md:text-lg'
             key={index}
             variants={fadeInAnimationVariants}
             initial='initial'

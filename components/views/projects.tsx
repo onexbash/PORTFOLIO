@@ -35,7 +35,7 @@ export default function Projects() {
           whileInView='animate'
           viewport={{ once: true }}
           variants={variants}
-          className='heading'
+          className='heading text-highlight_fg'
         >
           Projects
         </motion.p>
