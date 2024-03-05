@@ -10,7 +10,7 @@ export function ModeToggle() {
   const { setTheme } = useTheme();
   useEffect(() => {
     setTheme('dark');
-  }, []);
+  }, [setTheme]);
 
   return (
     <Button

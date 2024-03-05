@@ -45,9 +45,10 @@ const config = {
         base_color: 'var(--base_color)',
         mantle_color: 'var(--mantle_color)',
         crust_color: 'var(--crust_color)',
-        brightpink_color: 'var(--brightpink_color)',
-        brightcyan_color: 'var(--brightcyan_color)',
         cat_white: 'var(--cat_white)',
+
+        one_highlight1: 'var(--mauve_color)',
+        one_highlight2: 'var(--sapphire_color)',
 
         text: 'var(--text)',
         border: 'hsl(var(--border))',

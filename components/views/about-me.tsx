@@ -4,44 +4,17 @@ import { EvervaultCard } from '@/components/ui/evervault-card';
 import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import { FaXTwitter } from 'react-icons/fa6';
-import {
-  IconCloudflare,
-  IconCSS,
-  IconFigma,
-  IconFirebase,
-  IconGit,
-  IconHTML,
-  IconJavascript,
-  IconJest,
-  IconMarkdown,
-  IconMySQL,
-  IconNextJS,
-  IconNodeJS,
-  IconPostgres,
-  IconPrisma,
-  IconPython,
-  IconReactJS,
-  IconTailwindcss,
-  IconTypescript,
-  IconVite,
-  IconVSCode,
-} from '@/components/icons';
+
+import { techlinks, techfill, iconComponents } from '@/components/icons/technologies';
+
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from 'next-themes';
 import { FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
 
-interface IconLink {
-  href: string;
-  Component: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  title: string;
-}
-
 export default function AboutMe() {
   const { ref } = useSectionInView('About me', 0.3);
-  const { theme } = useTheme();
 
   const variants = {
     initial: {
@@ -57,29 +30,6 @@ export default function AboutMe() {
       },
     },
   };
-
-  const iconData = [
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/HTML', IconComponent: IconHTML },
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', IconComponent: IconCSS },
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', IconComponent: IconJavascript },
-    { href: 'https://www.typescriptlang.org', IconComponent: IconTypescript },
-    { href: 'https://www.figma.com', IconComponent: IconFigma },
-    { href: 'https://tailwindcss.com', IconComponent: IconTailwindcss },
-    { href: 'https://nextjs.org', IconComponent: IconNextJS },
-    { href: 'https://reactjs.org', IconComponent: IconReactJS },
-    { href: 'https://www.python.org', IconComponent: IconPython },
-    { href: 'https://www.postgresql.org', IconComponent: IconPostgres },
-    { href: 'https://www.prisma.io', IconComponent: IconPrisma },
-    { href: 'https://www.mysql.com', IconComponent: IconMySQL },
-    { href: 'https://firebase.google.com', IconComponent: IconFirebase },
-    { href: 'https://git-scm.com', IconComponent: IconGit },
-    { href: 'https://vitejs.dev', IconComponent: IconVite },
-    { href: 'https://code.visualstudio.com', IconComponent: IconVSCode },
-    { href: 'https://www.cloudflare.com', IconComponent: IconCloudflare },
-    { href: 'https://www.markdownguide.org', IconComponent: IconMarkdown },
-    { href: 'https://jestjs.io', IconComponent: IconJest },
-    { href: 'https://nodejs.org/en', IconComponent: IconNodeJS },
-  ];
 
   return (
     <section id='about-me' ref={ref} className='mx-auto max-w-6xl p-4 pt-28'>
@@ -181,14 +131,14 @@ function AboutImage() {
 function BoxOne() {
   return (
     <p className='text-lg text-[#181825]/60 dark:text-[#cdd6f4]/60'>
-      Hey there! I'm <span className='bento-grid-text'>Fabian Schlegel</span>, a 21-year-old with a passion
-      for <span className='bento-grid-text'>Cyber security and Tech</span> . Ever since I started my career,
-      I've been diving deep into the world of{' '}
-      <span className='italic dark:text-[#cdd6f4]/90'>Identity & Access Management (IAM)</span>, working on
-      impactful projects that helped me become a quick learner and a skilled consultant. But hold on tight,
-      because even though I'm comfortable navigating the world of advice and solutions, my career also extends
-      the world of technical implementation. Think intricate systems, clever coding, and making sure
-      everything runs smoothly – that's my happy place!
+      I started my career in the IT industry with an Apprenticeship as IT Specialist back in 2019. After
+      graduating I immediately found my way into the world of
+      <span className='italic dark:text-[#cdd6f4]/90'> Identity & Access Management.</span> Through my active
+      participation in influential projects, I swiftly acquired essential skills both in the area of
+      consulting and technical implementation. My active involvement in influential projects equipped me with
+      essential skills in both consulting and technical implementation. While I appreciate the consulting
+      industry, my true passion lies in hands-on engineering and programming — I couldn’t imagine life without
+      it.
     </p>
   );
 }
@@ -196,8 +146,13 @@ function BoxOne() {
 function CompletedProjects() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <span className='text-5xl font-bold'>30+</span>
-      <span className='mt-1 whitespace-nowrap text-center text-foreground/70'>Completed Projects</span>
+      <span className='text-5xl font-bold'>
+        5
+        <span className='ml-2 whitespace-nowrap text-center align-middle text-sm font-normal text-foreground/70'>
+          years
+        </span>
+      </span>
+      <span className='mt-1 whitespace-nowrap text-center font-bold text-foreground/70'>IT Experience</span>
     </div>
   );
 }
@@ -205,8 +160,13 @@ function CompletedProjects() {
 function Experience() {
   return (
     <div className='flex flex-col items-center justify-center'>
-      <span className='text-5xl font-bold'>3+</span>
-      <span className='mt-1 whitespace-nowrap text-center text-foreground/70'>Experience</span>
+      <span className='text-5xl font-bold'>
+        2
+        <span className='ml-2 whitespace-nowrap text-center align-middle text-sm font-normal text-foreground/70'>
+          years
+        </span>
+      </span>
+      <span className='mt-1 whitespace-nowrap text-center font-bold text-foreground/70'>IAM Experience</span>
     </div>
   );
 }
@@ -214,43 +174,19 @@ function Experience() {
 function DescriptionTwo() {
   return (
     <p className='text-lg text-[#181825]/50 dark:text-[#cdd6f4]/60'>
-      Beyond the world of security, I'm also a self-taught{' '}
-      <span className='bento-grid-text'>Full Stack Developer</span> , having spent my free time mastering both{' '}
-      <span className='italic text-[#181825] dark:text-[#cdd6f4]/90'>front-end and back-end development</span>{' '}
-      . This dual expertise allows me to see projects from a unique perspective, ensuring secure systems with
-      user-friendly interfaces.
+      In addition to my full-time job in cybersecurity (IAM), I’ve dedicated significant free time over the
+      past two years to self-teaching web development. I take pride in being a self-taught full-stack
+      developer
     </p>
   );
 }
 
 function FavouriteStack() {
   const { theme } = useTheme();
-  const iconData = [
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/HTML', IconComponent: IconHTML },
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/CSS', IconComponent: IconCSS },
-    { href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', IconComponent: IconJavascript },
-    { href: 'https://www.typescriptlang.org', IconComponent: IconTypescript },
-    { href: 'https://www.figma.com', IconComponent: IconFigma },
-    { href: 'https://tailwindcss.com', IconComponent: IconTailwindcss },
-    { href: 'https://nextjs.org', IconComponent: IconNextJS },
-    { href: 'https://reactjs.org', IconComponent: IconReactJS },
-    { href: 'https://www.python.org', IconComponent: IconPython },
-    { href: 'https://www.postgresql.org', IconComponent: IconPostgres },
-    { href: 'https://www.prisma.io', IconComponent: IconPrisma },
-    { href: 'https://www.mysql.com', IconComponent: IconMySQL },
-    { href: 'https://firebase.google.com', IconComponent: IconFirebase },
-    { href: 'https://git-scm.com', IconComponent: IconGit },
-    { href: 'https://vitejs.dev', IconComponent: IconVite },
-    { href: 'https://code.visualstudio.com', IconComponent: IconVSCode },
-    { href: 'https://www.cloudflare.com', IconComponent: IconCloudflare },
-    { href: 'https://www.markdownguide.org', IconComponent: IconMarkdown },
-    { href: 'https://jestjs.io', IconComponent: IconJest },
-    { href: 'https://nodejs.org/en', IconComponent: IconNodeJS },
-  ];
 
   return (
     <div>
-      Favourite Stack
+      Core Technologies
       <Marquee
         autoFill
         pauseOnHover
@@ -258,11 +194,20 @@ function FavouriteStack() {
         gradient={true}
         gradientColor={`${theme === 'light' ? '#F4F4F5' : '#232336'}`}
       >
-        {iconData.map(({ href, IconComponent }, index) => (
-          <a target='_blank' key={index} href={href}>
-            <IconComponent className='me-4' width='52' height='52' />
-          </a>
-        ))}
+        {Object.keys(techlinks).map((iconName) => {
+          const IconComponent = iconComponents[iconName];
+          if (!IconComponent) {
+            console.error(`Missing component for icon: ${iconName}`);
+            return null;
+          }
+          return (
+            <Link href={techlinks[iconName]} key={iconName}>
+              <div className='mx-4 h-16 w-16 rounded-xl hover:bg-pink-400'>
+                <IconComponent className='w-full p-1' fill={techfill[iconName]} />
+              </div>
+            </Link>
+          );
+        })}
       </Marquee>
     </div>
   );
@@ -270,7 +215,7 @@ function FavouriteStack() {
 
 function LinkedIn() {
   return (
-    <Link href={'https://www.linkedin.com/'}>
+    <Link href={'https://www.linkedin.com/in/fabian-schlegel'}>
       {' '}
       <FaLinkedin size={80} />
     </Link>
