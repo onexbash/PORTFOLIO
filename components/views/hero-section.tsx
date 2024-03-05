@@ -57,13 +57,13 @@ export default function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ ease: 'easeOut', duration: 0.1 }}
           >
-            <div className='mt-10 text-3xl font-bold text-foreground md:text-5xl'>
-              Hello, 👋 I'm Fabian Schlegel.
+            <div className='mt-10 text-3xl font-bold text-highlight_fg md:text-5xl'>
+              Hello World 👋, I'm Fabian Schlegel.
             </div>
             <p className='mt-6 max-w-3xl text-sm text-primary_fg opacity-80 md:text-base'>
-              I'm a 21-year-old Identity & Access Management professional specializing in technical
-              implementation, a skill honed through key projects. My passion extends to cybersecurity, and
-              I've also delved into Full Stack Development in my free time.
+              I'm a 21-year-old Identity & Access Management professional from germany specializing in
+              technical implementation, a skill honed through key projects. My passion extends to
+              cybersecurity, and I've also delved into Full Stack Development in my free time.
             </p>
             <div className='mt-10 flex flex-col justify-center gap-5 md:flex-row'>
               <a target='_blank' href='/downloads/resume-fabian-schlegel.pdf' className='outline-none'>

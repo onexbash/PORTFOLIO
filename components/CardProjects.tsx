@@ -2,14 +2,6 @@ import '@/css/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
 
 import { cn } from '@/lib/utils';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,17 +11,17 @@ const CardProjects = ({ href, title, imgSrc, company, tasks, description, ...pro
     <div>
       <CardHeader>
         <div className=''>
-          <a
+          <Link
             target='_blank'
-            className=' font-light text-black/80 dark:text-[#cdd6f4]/80'
+            className='hovertxt font-semibold text-secondary_fg'
             href={href}
             aria-label={`Link to ${company}`}
           >
             {company}
-          </a>
+          </Link>
         </div>
 
-        {/* <CardTitle></CardTitle> */}
+        <CardTitle className='text-xl font-bold text-highlight_fg md:text-3xl'>{title}</CardTitle>
       </CardHeader>
       <CardContent className='overflow-hidden '>
         <div className='relative  gap-6'>
@@ -43,24 +35,11 @@ const CardProjects = ({ href, title, imgSrc, company, tasks, description, ...pro
             />
           </div>
           <div>
-            <p className=' text-xl font-bold md:text-3xl'>{title}</p>
             <div className='py-6 pt-3'>
-              <p className='  max-w-none text-sm text-black/60 dark:text-[#cdd6f4]/60'>{description}</p>
+              <p className='  max-w-none text-sm text-secondary_fg'>{description}</p>
             </div>
           </div>
         </div>
-        {/* <Dialog>
-          <DialogTrigger>View Full Project</DialogTrigger>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Are you absolutely sure?</DialogTitle>
-              <DialogDescription>
-                This action cannot be undone. This will permanently delete your account and remove your data
-                from our servers.
-              </DialogDescription>
-            </DialogHeader>
-          </DialogContent>
-        </Dialog> */}
       </CardContent>
     </div>
   </Card>

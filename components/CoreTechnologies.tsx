@@ -15,7 +15,7 @@ export function CoreTechnologies() {
           return (
             <Link href={techlinks[iconName]} key={iconName}>
               <div className='hoverbg mx-4 h-16 w-16 rounded-lg bg-secondary_bg'>
-                <IconComponent className='w-full p-1' fill={techfill[iconName]} />
+                <IconComponent className='w-full p-1 text-secondary_bg' fill={techfill[iconName]} />
               </div>
             </Link>
           );

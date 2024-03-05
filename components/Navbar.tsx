@@ -30,13 +30,13 @@ export default function Navbar() {
           animate={{ y: 0 }}
           className='!backdrop-blur-md'
         >
-          <div className='!dark:opacity-20 mx-auto flex max-w-6xl items-center justify-between border border-zinc-200/10 bg-[#cdd6f4]/40 p-4 !backdrop-blur-md dark:border-zinc-700/10  dark:bg-[#313244] lg:px-5 xl:mt-3 xl:rounded-2xl xl:p-2'>
-            <div className='flex lg:flex-1'>
+          <div className=' mx-auto mt-3 flex max-w-6xl items-center justify-between rounded-2xl bg-secondary_bg p-2 px-5 opacity-80 shadow shadow-primary_bg !backdrop-blur-md'>
+            <div className='flex md:flex-1'>
               <Link href='/' className='ms-3 h-8 w-8 p-1.5 outline-none'>
-                <IconFavicon className='h-6 w-6' fill='#cba6f7' />
+                <IconFavicon className='h-6 w-6 text-accent2' fill='currentColor' />
               </Link>
             </div>
-            <div className='flex lg:hidden'>
+            <div className='flex md:hidden'>
               <button
                 type='button'
                 className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
@@ -46,15 +46,15 @@ export default function Navbar() {
                 <Bars3Icon className='h-6 w-6 text-foreground' aria-hidden='true' />
               </button>
             </div>
-            <Popover.Group className='hidden  md:flex lg:gap-x-6'>
+            <Popover.Group className='hidden md:flex md:gap-x-6'>
               {links.map((link) => (
                 <li className='relative flex  items-center justify-center' key={link.hash}>
                   <Link
                     className={clsx(
                       `flex w-full items-center justify-center px-3 py-1 text-sm transition    ${
                         activeSection === link.name
-                          ? 'text-white hover:text-white dark:hover:text-white'
-                          : ' out rounded-full outline-none hover:text-purple-400  dark:hover:text-purple-300'
+                          ? 'text-accent_fg'
+                          : ' out hovertxt rounded-full outline-none '
                       }`
                     )}
                     href={link.hash}
@@ -67,7 +67,7 @@ export default function Navbar() {
 
                     {link.name === activeSection && (
                       <motion.span
-                        className='active-header-link absolute inset-0 -z-10 rounded-full text-white outline-none'
+                        className='active-header-link absolute inset-0 -z-10 rounded-full text-primary_fg outline-none'
                         layoutId='activeSection'
                         transition={{
                           type: 'spring',
@@ -80,18 +80,18 @@ export default function Navbar() {
                 </li>
               ))}
             </Popover.Group>
-            <div className='me-3 hidden lg:flex lg:flex-1 lg:justify-end'>
+            <div className='me-3 hidden md:flex md:flex-1 md:justify-end'>
               <ModeToggle />
             </div>
           </div>
         </motion.nav>
       </div>
-      <Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog as='div' className='md:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className='fixed inset-0 z-10' />
-        <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto !bg-background/90 px-6 py-6 backdrop-blur-md sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+        <Dialog.Panel className='!bg-background_bg fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 backdrop-blur-md md:max-w-sm md:ring-1 md:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
-            <Link href='/' className='-m-1.5 p-1.5 outline-none'>
-              <p className='text-xl font-bold'>Fabian Schlegel</p>
+            <Link href='/' className='ms-3 h-8 w-8 p-1.5 outline-none'>
+              <IconFavicon className='h-6 w-6 text-accent2' fill='currentColor' />
             </Link>
             <button
               type='button'
@@ -99,11 +99,11 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className='sr-only'>Close menu</span>
-              <XMarkIcon className='h-6 w-6 text-foreground' aria-hidden='true' />
+              <XMarkIcon className='h-6 w-6 text-primary_fg' aria-hidden='true' />
             </button>
           </div>
           <div className='mt-6 flow-root'>
-            <div className='-my-6 divide-y divide-gray-500/10'>
+            <div className='-my-6 divide-y divide-accent3'>
               <div className='space-y-2 py-6'>
                 <Disclosure as='div' className='-mx-3'>
                   {({ open }) => <></>}
@@ -112,10 +112,8 @@ export default function Navbar() {
                   <li className='relative flex  items-center justify-center' key={link.hash}>
                     <Link
                       className={clsx(
-                        `flex w-full items-center justify-center px-3 py-4 text-sm transition    ${
-                          activeSection === link.name
-                            ? 'text-white hover:text-white dark:hover:text-white'
-                            : ' hover:text-purple-400 dark:hover:text-purple-300'
+                        `flex w-full items-center justify-center rounded-2xl px-3 py-4 text-sm transition    ${
+                          activeSection === link.name ? 'text-accent_fg' : ' hovertxt'
                         }`
                       )}
                       href={link.hash}
@@ -128,7 +126,7 @@ export default function Navbar() {
 
                       {link.name === activeSection && (
                         <motion.span
-                          className='absolute inset-0 -z-10  rounded-full bg-mauve_color text-text_color'
+                          className='absolute inset-0 -z-10  rounded-full bg-accent1 text-accent_fg'
                           layoutId='activeSection'
                           transition={{
                             type: 'spring',
