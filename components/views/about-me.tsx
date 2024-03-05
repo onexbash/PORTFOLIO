@@ -4,6 +4,7 @@ import { EvervaultCard } from '@/components/ui/evervault-card';
 import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import { CoreTechnologies } from '@/components/CoreTechnologies';
 
 import { techlinks, techfill, iconComponents } from '@/components/icons/technologies';
 
@@ -39,7 +40,7 @@ export default function AboutMe() {
           whileInView='animate'
           viewport={{ once: true }}
           variants={variants}
-          className='heading text-gradient  from-foreground to-foreground/60 text-center '
+          className='heading text-center text-accent3 '
         >
           About me
         </motion.p>
@@ -97,7 +98,7 @@ export default function AboutMe() {
           variants={variants}
           className='bento-grid-box col-span-4 mb-3 h-full text-center'
         >
-          <FavouriteStack />
+          <CoreTechnologies />
         </motion.div>
 
         <motion.div
@@ -116,13 +117,13 @@ export default function AboutMe() {
 
 function AboutImage() {
   return (
-    <div className='relative flex items-center justify-center rounded-full text-4xl font-bold text-white'>
+    <div className='relative flex items-center justify-center rounded-full'>
       <Image
         src='/images/avatar.png'
-        width={200}
-        height={200}
+        width={400}
+        height={400}
         alt='Fabian Schlegel'
-        className='w-40 select-none rounded-full border border-zinc-300 bg-white/10 backdrop-blur-lg dark:border-0 dark:bg-white/10'
+        className=' w-40 select-none rounded-full bg-primary_bg shadow shadow-accent1 backdrop-blur-lg'
       ></Image>
     </div>
   );
@@ -130,15 +131,14 @@ function AboutImage() {
 
 function BoxOne() {
   return (
-    <p className='text-lg text-[#181825]/60 dark:text-[#cdd6f4]/60'>
+    <p className='text-secondary_fg md:text-lg'>
       I started my career in the IT industry with an Apprenticeship as IT Specialist back in 2019. After
       graduating I immediately found my way into the world of
-      <span className='italic dark:text-[#cdd6f4]/90'> Identity & Access Management.</span> Through my active
-      participation in influential projects, I swiftly acquired essential skills both in the area of
-      consulting and technical implementation. My active involvement in influential projects equipped me with
-      essential skills in both consulting and technical implementation. While I appreciate the consulting
-      industry, my true passion lies in hands-on engineering and programming — I couldn’t imagine life without
-      it.
+      <span className='text-primary_fg '> Identity & Access Management.</span> Through my active participation
+      in influential projects, I swiftly acquired essential skills both in the area of consulting and
+      technical implementation. My active involvement in influential projects equipped me with essential
+      skills in both consulting and technical implementation. While I appreciate the consulting industry, my
+      true passion lies in hands-on engineering and programming — I couldn’t imagine life without it.
     </p>
   );
 }
@@ -148,11 +148,11 @@ function CompletedProjects() {
     <div className='flex flex-col items-center justify-center'>
       <span className='text-5xl font-bold'>
         5
-        <span className='ml-2 whitespace-nowrap text-center align-middle text-sm font-normal text-foreground/70'>
+        <span className='text-foreground/70 ml-2 whitespace-nowrap text-center align-middle text-sm font-normal'>
           years
         </span>
       </span>
-      <span className='mt-1 whitespace-nowrap text-center font-bold text-foreground/70'>IT Experience</span>
+      <span className='text-foreground/70 mt-1 whitespace-nowrap text-center font-bold'>IT Experience</span>
     </div>
   );
 }
@@ -162,11 +162,11 @@ function Experience() {
     <div className='flex flex-col items-center justify-center'>
       <span className='text-5xl font-bold'>
         2
-        <span className='ml-2 whitespace-nowrap text-center align-middle text-sm font-normal text-foreground/70'>
+        <span className='text-foreground/70 ml-2 whitespace-nowrap text-center align-middle text-sm font-normal'>
           years
         </span>
       </span>
-      <span className='mt-1 whitespace-nowrap text-center font-bold text-foreground/70'>IAM Experience</span>
+      <span className='text-foreground/70 mt-1 whitespace-nowrap text-center font-bold'>IAM Experience</span>
     </div>
   );
 }
@@ -178,38 +178,6 @@ function DescriptionTwo() {
       past two years to self-teaching web development. I take pride in being a self-taught full-stack
       developer
     </p>
-  );
-}
-
-function FavouriteStack() {
-  const { theme } = useTheme();
-
-  return (
-    <div>
-      Core Technologies
-      <Marquee
-        autoFill
-        pauseOnHover
-        className='mt-6 flex '
-        gradient={true}
-        gradientColor={`${theme === 'light' ? '#F4F4F5' : '#232336'}`}
-      >
-        {Object.keys(techlinks).map((iconName) => {
-          const IconComponent = iconComponents[iconName];
-          if (!IconComponent) {
-            console.error(`Missing component for icon: ${iconName}`);
-            return null;
-          }
-          return (
-            <Link href={techlinks[iconName]} key={iconName}>
-              <div className='mx-4 h-16 w-16 rounded-xl hover:bg-pink-400'>
-                <IconComponent className='w-full p-1' fill={techfill[iconName]} />
-              </div>
-            </Link>
-          );
-        })}
-      </Marquee>
-    </div>
   );
 }
 

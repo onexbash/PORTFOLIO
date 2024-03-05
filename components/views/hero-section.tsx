@@ -48,7 +48,7 @@ export default function HeroSection() {
               width={200}
               height={200}
               alt='Fabian Schlegel'
-              className='unblur-animation border-one_border 0 w-40 rounded-full border bg-transparent backdrop-blur-lg'
+              className='unblur-animation 0 w-40 rounded-full bg-transparent shadow shadow-accent1 backdrop-blur-lg'
             ></Image>
           </motion.div>
           <motion.div
@@ -59,18 +59,14 @@ export default function HeroSection() {
             <div className='mt-10 text-3xl font-bold text-foreground md:text-5xl'>
               Hello, 👋 I'm Fabian Schlegel.
             </div>
-            <p className='text-one_primary_fg mt-6 max-w-3xl text-sm opacity-80 md:text-base'>
+            <p className='mt-6 max-w-3xl text-sm text-primary_fg opacity-80 md:text-base'>
               I'm a 21-year-old Identity & Access Management professional specializing in technical
               implementation, a skill honed through key projects. My passion extends to cybersecurity, and
               I've also delved into Full Stack Development in my free time.
             </p>
             <div className='mt-10 flex flex-col justify-center gap-5 md:flex-row'>
               <a target='_blank' href='/downloads/resume-fabian-schlegel.pdf' className='outline-none'>
-                <Button
-                  variant={'default'}
-                  className='!bg-one_accent2 w-full rounded-full text-lg'
-                  size={'xl'}
-                >
+                <Button variant={'default'} className='w-full rounded-full !bg-accent2 text-lg' size={'xl'}>
                   Download Resume
                   <HiOutlineDownload size={20} />
                 </Button>
@@ -78,10 +74,10 @@ export default function HeroSection() {
               <Link href='#contact'>
                 <Button
                   variant={'outline'}
-                  className='bg-one_accent w-full rounded-full pe-20 ps-14 text-lg '
+                  className='w-full rounded-full bg-accent1 pe-20 ps-14 text-lg text-accent_fg'
                   size={'xl'}
                 >
-                  <PiDotFill size={36} className='text-one_accent2 mb-[2px]' />
+                  <PiDotFill size={36} className='mb-[2px] text-accent2' />
                   Hire Me
                 </Button>
               </Link>

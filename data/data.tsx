@@ -116,7 +116,7 @@ export const projectsData = [
       'Maintenance + Hypercare Phase',
     ],
     url: 'https://www.kiongroup.com/en/About-us/KION-at-a-glance/',
-    imgSrc: '/svg/kion.svg',
+    imgSrc: '/icons/kion.svg',
   },
   {
     name: 'PROJECT ALLIANZ',
@@ -131,7 +131,7 @@ export const projectsData = [
       'API documentation and testing',
     ],
     url: 'https://www.allianzgi.com/',
-    imgSrc: '/svg/allinaz.svg',
+    imgSrc: '/icons/allianz.svg',
   },
   {
     name: 'PROJECT MERCEDES',
@@ -146,7 +146,7 @@ export const projectsData = [
       'Development of Custom Feature Requests',
     ],
     url: 'https://www.mercedes-benz-bank.de/',
-    imgSrc: '/svg/mercedes-benz-bank.svg',
+    imgSrc: '/icons/mercedes-benz-bank.svg',
   },
   {
     name: 'PROJECT BMW',
@@ -161,7 +161,7 @@ export const projectsData = [
       'Decision Making',
     ],
     url: 'https://www.bmwgroup.com/en.html',
-    imgSrc: '/svg/bmw-group.svg',
+    imgSrc: '/icons/bmw-group.svg',
   },
 ] as const;
 

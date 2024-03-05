@@ -4,113 +4,117 @@
 
 @layer base {
   :root {
-    --rosewater_color: #f5e0dc;
-    --flamingo_color: #f2cdcd;
-    --pink_color: #f5c2e7;
-    --mauve_color: #cba6f7;
-    --red_color: #f38ba8;
-    --maroon_color: #eba0ac;
-    --peach_color: #fab387;
-    --yellow_color: #f9e2af;
-    --green_color: #a6e3a1;
-    --teal_color: #94e2d5;
-    --sky_color: #89dceb;
-    --sapphire_color: #74c7ec;
-    --blue_color: #89b4fa;
-    --lavendar_color: #b4befe;
-    --text_color: #cdd6f4;
-    --subtext1_color: #bac2de;
-    --subtext0_color: #a6adc8;
-    --overlay2_color: #9399b2;
-    --overlay1_color: #7f849c;
-    --overlay0_color: #6c7086;
-    --surface2_color: #585b70;
-    --surface1_color: #45475a;
-    --surface0_color: #313244;
-    --base_color: #1e1e2e;
-    --mantle_color: #181825;
-    --crust_color: #0c0c0c;
-    --cat-white: #fff;
-    --base_color: #1e1e2e;
-
-    --background: var(--base_color);
-    --foreground: 224 71.4% 4.1%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
-
-    --secondary: 240, 5%, 96%;
-    --secondary-foreground: 220.9 39.3% 11%;
-
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
-
-    --radius: 0.5rem;
+    /* Catppuccin Latte */
+    --Rosewater: hsl(11, 59%, 67%);
+    --Flamingo: hsl(0, 60%, 67%);
+    --Pink: hsl(316, 73%, 69%);
+    --Mauve: hsl(266, 85%, 58%);
+    --Red: hsl(347, 87%, 44%);
+    --Maroon: hsl(355, 76%, 59%);
+    --Peach: hsl(22, 99%, 52%);
+    --Yellow: hsl(35, 77%, 49%);
+    --Green: hsl(109, 58%, 40%);
+    --Teal: hsl(183, 74%, 35%);
+    --Sky: hsl(197, 97%, 46%);
+    --Sapphire: hsl(189, 70%, 42%);
+    --Blue: hsl(220, 91%, 54%);
+    --Lavender: hsl(231, 97%, 72%);
+    --Text: hsl(234, 16%, 35%);
+    --Subtext1: hsl(233, 13%, 41%);
+    --Subtext0: hsl(233, 10%, 47%);
+    --Overlay2: hsl(232, 10%, 53%);
+    --Overlay1: hsl(231, 10%, 59%);
+    --Overlay0: hsl(228, 11%, 65%);
+    --Surface2: hsl(227, 12%, 71%);
+    --Surface1: hsl(225, 14%, 77%);
+    --Surface0: hsl(223, 16%, 83%);
+    --Base: hsl(220, 23%, 95%);
+    --Mantle: hsl(220, 22%, 92%);
+    --Crust: hsl(220, 21%, 89%);
+    /* DETERMING VARIABLES */
+    --radius1: 0.5rem;
+    --radius2: 1rem;
+    /* LIGHTMODE ONLY */
+    --primary_bg: var(--Base);
+    --primary_fg: var(--Text);
+    --secondary_bg: var(--Mantle);
+    --secondary_fg: var(--Subtext0);
+    --highlight_fg: var(--Lavender);
+    --accent1: var(--Sky);
+    --accent2: var(--Pink);
+    --accent3: var(--Lavender);
+    --accent_fg: var(--Crust);
   }
 
   .dark {
-    --background: 0, 0%, 5%;
-    --foreground: 210 20% 98%;
+    /* Catppuccin Mocha */
+    --Rosewater: hsl(10, 56%, 91%);
+    --Flamingo: hsl(0, 59%, 88%);
+    --Pink: hsl(316, 72%, 86%);
+    --Mauve: hsl(267, 84%, 81%);
+    --Red: hsl(343, 81%, 75%);
+    --Maroon: hsl(350, 65%, 77%);
+    --Peach: hsl(23, 92%, 75%);
+    --Yellow: hsl(41, 86%, 83%);
+    --Green: hsl(115, 54%, 76%);
+    --Teal: hsl(170, 57%, 73%);
+    --Sky: hsl(189, 71%, 73%);
+    --Sapphire: hsl(199, 76%, 69%);
+    --Blue: hsl(217, 92%, 76%);
+    --Lavender: hsl(232, 97%, 85%);
+    --Text: hsl(226, 64%, 88%);
+    --Subtext1: hsl(227, 35%, 80%);
+    --Subtext0: hsl(228, 24%, 72%);
+    --Overlay2: hsl(228, 17%, 64%);
+    --Overlay1: hsl(230, 13%, 55%);
+    --Overlay0: hsl(231, 11%, 47%);
+    --Surface2: hsl(233, 12%, 39%);
+    --Surface1: hsl(234, 13%, 31%);
+    --Surface0: hsl(240, 22%, 18%);
+    /*
+    --Surface0: hsl(237, 16%, 23%);
+    */
+    --Base: hsl(240, 21%, 15%);
+    --Mantle: hsl(240, 21%, 12%);
+    --Crust: hsl(240, 23%, 9%);
 
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
-
-    --secondary: 237 16% 23%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 240, 5%, 34%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    /* DARKMODE ONLY */
+    --primary_bg: var(--Base);
+    --primary_fg: var(--Text);
+    --secondary_bg: hsl(240, 22%, 18%);
+    --secondary_fg: var(--Subtext0);
+    --accent1: var(--Sapphire);
+    --accent2: var(--Mauve);
+    --accent3: var(--Lavender);
+    --accent_fg: var(--Crust);
+    --highlight_fg: var(--Lavender);
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-accent3;
   }
 
   body {
-    @apply bg-cat_white text-foreground dark:bg-mantle_color;
+    @apply bg-primary_bg text-primary_fg;
   }
 }
 
+.hoverbg {
+  @apply duration-500 hover:bg-accent3 hover:opacity-70;
+}
+
+.hovertxt {
+  @apply hover:text-accent1;
+}
+
 .active-header-link {
-  @apply bg-mauve_color;
+  @apply bg-accent1;
 }
 
 .background-grid-color {
-  @apply bg-gradient-to-t from-white via-transparent to-transparent dark:from-mantle_color;
+  @apply bg-gradient-to-t from-primary_bg via-transparent to-transparent;
 }
 
 .heading {
@@ -129,11 +133,11 @@
 }
 
 .bento-grid-box {
-  @apply rounded-lg bg-secondary p-4 py-7 text-secondary-foreground dark:bg-[#232336] md:p-10;
+  @apply rounded-lg bg-secondary_bg p-4 py-7 text-primary_fg dark:text-accent3 md:p-10;
 }
 
 .bento-grid-text {
-  @apply text-lg text-[#181825]/80 dark:text-[#cdd6f4];
+  @apply text-lg text-secondary_fg;
 }
 
 @keyframes unblur {
@@ -148,10 +152,6 @@
 
 .unblur-animation {
   animation: unblur 1s ease-out forwards;
-}
-
-.borderBlack {
-  @apply border border-black/10;
 }
 
 .autosize-none {

@@ -45,7 +45,7 @@ export default function ContactMe() {
       <motion.section
         id='contact'
         ref={ref}
-        className='z-[30] mx-auto mb-20 flex max-w-6xl  flex-col gap-10 pt-28 text-center sm:mb-28'
+        className='z-[30] mx-auto mb-20 flex max-w-6xl flex-col gap-10 pt-28 text-center sm:mb-28'
         initial={{
           opacity: 0,
         }}
@@ -61,17 +61,17 @@ export default function ContactMe() {
       >
         <div className='mx-auto w-full max-w-2xl '>
           <div className='flex flex-col justify-center'>
-            <p className='text-gradient flex justify-center from-foreground to-foreground/60 text-center text-4xl'>
+            <p className='to-primary_fg/60 flex justify-center from-primary_fg text-center text-4xl text-gradient'>
               Contact me
             </p>
-            <p className='mt-2 text-foreground/60'>
-              Contact me directly at <span className='text-foreground'>fabian@schlegel.one</span> or use this
+            <p className='primary_fg/60 mt-2'>
+              Contact me directly at <span className='text-primary_fg'>fabian@schlegel.one</span> or use this
               form.
             </p>
           </div>
-          <form className='mt-10 flex flex-col text-text_color dark:text-base_color' onSubmit={sendMail}>
+          <form className='mt-10 flex flex-col text-primary_fg dark:text-primary_bg' onSubmit={sendMail}>
             <Input
-              className='borderBlack h-14 rounded-lg px-4 outline-none transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 dark:bg-secondary/80  dark:bg-opacity-80 dark:text-text_color dark:outline-none '
+              className='dark:secondary_bg/80 h-14 rounded-lg border border-accent3 px-4 outline-none transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-0 dark:bg-opacity-80 dark:text-primary_fg dark:outline-none '
               name='senderEmail'
               type='email'
               required
@@ -83,7 +83,7 @@ export default function ContactMe() {
               }}
             />
             <Textarea
-              className='autosize-none borderBlack my-3 h-52  rounded-lg p-4   outline-none transition-all  focus:ring-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 dark:bg-secondary/80 dark:bg-opacity-80 dark:text-text_color dark:outline-none dark:focus:bg-opacity-100 dark:focus:ring-1 dark:active:ring-1'
+              className='autosize-none dark:secondary_bg/80 my-3 h-52 rounded-lg  border border-accent3   p-4 outline-none  transition-all focus:ring-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 dark:bg-opacity-80 dark:text-primary_fg dark:outline-none dark:focus:bg-opacity-100 dark:focus:ring-1 dark:active:ring-1'
               name='message'
               placeholder='Message'
               required
@@ -95,7 +95,7 @@ export default function ContactMe() {
             />
             <Button
               variant={'default'}
-              className='h-10 w-full text-lg hover:scale-100 dark:bg-lavendar_color'
+              className='h-10 w-full bg-accent3 text-lg hover:scale-100'
               type='submit'
             >
               Send Email

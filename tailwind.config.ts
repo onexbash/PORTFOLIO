@@ -1,94 +1,61 @@
 import type { Config } from 'tailwindcss';
 
-const config = {
+const config: Config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: '',
+  content: ['./components/**/*.{js,jsx,ts,tsx}', './app/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     extend: {
       colors: {
-        rosewater_color: 'var(--rosewater_color)',
-        flamingo_color: 'var(--flamingo_color)',
-        pink_color: 'var(--pink_color)',
-        mauve_color: 'var(--mauve_color)',
-        red_color: 'var(--red_color)',
-        maroon_color: 'var(--maroon_color)',
-        peach_color: 'var(--peach_color)',
-        yellow_color: 'var(--yellow_color)',
-        green_color: 'var(--green_color)',
-        teal_color: 'var(--teal_color)',
-        sky_color: 'var(--sky_color)',
-        sapphire_color: 'var(--sapphire_color)',
-        blue_color: 'var(--blue_color)',
-        lavendar_color: 'var(--lavendar_color)',
-        text_color: 'var(--text_color)',
-        subtext1_color: 'var(--subtext1_color)',
-        subtext0_color: 'var(--subtext0_color)',
-        overlay2_color: 'var(--overlay2_color)',
-        overlay1_color: 'var(--overlay1_color)',
-        overlay0_color: 'var(--overlay0_color)',
-        surface2_color: 'var(--surface2_color)',
-        surface1_color: 'var(--surface1_color)',
-        surface0_color: 'var(--surface0_color)',
-        base_color: 'var(--base_color)',
-        mantle_color: 'var(--mantle_color)',
-        crust_color: 'var(--crust_color)',
-        cat_white: 'var(--cat_white)',
+        /* determing variables from globals.css */
+        primary_bg: 'var(--primary_bg)',
+        primary_fg: 'var(--primary_fg)',
+        secondary_bg: 'var(--secondary_bg)',
+        secondary_fg: 'var(--secondary_fg)',
+        highlight_fg: 'var(--highlight_fg)',
+        accent1: 'var(--accent1)',
+        accent2: 'var(--accent2)',
+        accent3: 'var(--accent3)',
+        accent_fg: 'var(--accent_fg)',
 
-        one_highlight1: 'var(--mauve_color)',
-        one_highlight2: 'var(--sapphire_color)',
-
-        text: 'var(--text)',
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        /* shadcn variables */
+        background: 'var(--primary_bg)',
+        foreground: 'var(--primary_fg)',
+        text: 'var(--primary_fg)',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: 'var(--primary_bg)',
+          foreground: 'var(--primary_fg)',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: 'var(--secondary_bg)',
+          foreground: 'var(--secondary_fg)',
         },
+        gradient: 'var(--accent1)',
+        border: 'var(--accent3)',
+        input: 'var(--accent2)',
+        ring: 'var(--accent3)',
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: 'var(--secondary_bg)',
+          foreground: 'var(--secondary_fg)',
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: 'var(--secondary_bg)',
+          foreground: 'var(--secondary_fg)',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: 'var(--accent1)',
+          foreground: 'var(--primary_fg)',
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          DEFAULT: 'var(--secondary_bg)',
+          foreground: 'var(--secondary_fg)',
         },
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: 'var(--secondary_bg)',
+          foreground: 'var(--secondary_fg)',
         },
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        radius: {
+          DEFAULT: 'var(--radius1)',
+        },
       },
       keyframes: {
         'accordion-down': {
@@ -145,14 +112,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/forms'),
-    require('@catppuccin/tailwindcss')({
-      prefix: 'one',
-      defaultFlavour: 'mocha',
-    }),
-  ],
-} satisfies Config;
+  plugins: [require('tailwindcss-animate')],
+};
 
 export default config;
